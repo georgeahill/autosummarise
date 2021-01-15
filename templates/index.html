@@ -97,7 +97,7 @@
             document.getElementById("summary").innerHTML = "";
 
             $.ajax({
-                url: "/summarise",
+                url: "/autosummarise/summarise",
                 type: "POST",
                 data: { 'url': document.getElementById("search").value },
                 success: function (result) {
