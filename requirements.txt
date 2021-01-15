@@ -4,3 +4,4 @@ wikipedia
 unidecode
 BeautifulSoup4
 nltk
+gevent
