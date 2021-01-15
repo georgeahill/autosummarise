@@ -149,7 +149,7 @@ def summary():
 
     logging.debug('\n\n'.join(summary_sentences))
 
-    summary = "<div style=\"padding: 10px; overflow: scroll; max-height: 80vh;\">"
+    summary = "<div style=\"padding: 10px; overflow: scroll; max-height: 70vh;\">"
     summary += '<h2>' + parsed_article.title.text + '</h2>'
     summary += '<a href=' + article_url + '>Link</a>'
     summary += '<p>' + ' '.join(summary_sentences) + '</p>'
