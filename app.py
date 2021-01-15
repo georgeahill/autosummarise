@@ -48,12 +48,12 @@ def get_wiki_img(wiki_title):
     return json_data['query']['pages'][0]['original']['source'] if len(json_data['query']['pages']) >0 else 'Not found'
 
 
-@app.route("/")
+@app.route("/autosummarise")
 def index():
     return render_template("index.html")
 
 
-@app.route("/summarise", methods=["POST"])
+@app.route("/autosummarise/summarise", methods=["POST"])
 def summary():
     request.get_json()
     article_url = request.form['url']
