@@ -155,7 +155,3 @@ def summary():
     summary += "</div>"
 
     return jsonify(summary)
-
-
-if __name__ == '__main__':
-    pass
