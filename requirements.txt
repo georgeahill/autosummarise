@@ -1,0 +1,6 @@
+flask
+gunicorn
+wikipedia
+unidecode
+BeautifulSoup4
+nltk
