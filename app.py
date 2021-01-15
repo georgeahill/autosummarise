@@ -68,11 +68,11 @@ def summary():
         wiki_page = wikipedia.page(wiki_title, auto_suggest=False)
         article_url = wiki_page.url
         wiki_title = wiki_page.title
-        log.debug(article_url)
+        logging.debug(article_url)
 
         wiki_summary = True
         if wiki_summary:
-            log.debug(wiki_title)
+            logging.debug(wiki_title)
             wiki_img = get_wiki_img(wiki_title)
             summary = "<div style=\"padding: 10px;\">"
             summary += '<h2>' + wiki_title + ' - Wikipedia</h2>'
@@ -127,12 +127,12 @@ def summary():
     for word in word_frequencies.keys():
         word_frequencies[word] = (word_frequencies[word] / maximum_frequency)
 
-    log.debug(pformat(word_frequencies))
+    logging.debug(pformat(word_frequencies))
 
     sentence_scores = {}
     for sent in sentence_list:
         words_tokenised = nltk.word_tokenize(sent.lower())
-        log.debug(sent, words_tokenised, len(words_tokenised), '\n\n')
+        logging.debug(sent, words_tokenised, len(words_tokenised), '\n\n')
         for word in words_tokenised:
             if word in word_frequencies.keys():
                 if sent not in sentence_scores.keys():
@@ -146,7 +146,7 @@ def summary():
     summary_sentences = [k for k, v in sorted(
         sentence_scores.items(), key=lambda item: item[1])][::-1][:7]
 
-    log.debug('\n\n'.join(summary_sentences))
+    logging.debug('\n\n'.join(summary_sentences))
 
     summary = "<div style=\"padding: 10px;\">"
     summary += '<h2>' + parsed_article.title.text + '</h2>'
