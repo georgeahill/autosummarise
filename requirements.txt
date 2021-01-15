@@ -5,3 +5,4 @@ unidecode
 BeautifulSoup4
 nltk
 gevent
+lxml
