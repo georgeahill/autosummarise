@@ -76,7 +76,8 @@ def summary():
             wiki_img = get_wiki_img(wiki_title)
             summary = "<div style=\"padding: 10px;\">"
             summary += '<h2>' + wiki_title + ' - Wikipedia</h2>'
-            summary += '<a href=' + article_url + '>' + article_url + '</a>'
+            # summary += '<a href=' + article_url + '>' + article_url + '</a>'
+            summary += '<a href=' + article_url + '>Link</a>'
             summary += '<br/><img style="height: 20vh;" src=' + wiki_img + '>'
             summary += '<p>' + \
                 wikipedia.summary(wiki_title, sentences=7,
@@ -148,9 +149,9 @@ def summary():
 
     logging.debug('\n\n'.join(summary_sentences))
 
-    summary = "<div style=\"padding: 10px;\">"
+    summary = "<div style=\"padding: 10px; overflow: scroll\">"
     summary += '<h2>' + parsed_article.title.text + '</h2>'
-    summary += '<a href=' + article_url + '>' + article_url + '</a>'
+    summary += '<a href=' + article_url + '>Link</a>'
     summary += '<p>' + ' '.join(summary_sentences) + '</p>'
     summary += "</div>"
 
