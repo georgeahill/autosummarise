@@ -21,7 +21,7 @@ from pprint import pprint, pformat
 
 from flask import Flask, jsonify, request, render_template
 
-logging.basicConfig(filename="log.log", encoding="utf-8", level=logging.DEBUG)
+logging.basicConfig(filename="log.log", level=logging.DEBUG)
 app = Flask(__name__)
 
 
